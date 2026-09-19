@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f1ed;
+            margin: 0;
+            padding: 30px;
+            color: #3e2723;
+        }
+
+        .contenedor {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .panel {
+            background: white;
+            padding: 25px;
+            margin-top: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #0002;
+        }
+
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+        }
+
+        button {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #6d4c41;
+            color: white;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background: #4e342e;
+        }
+
+        .pedido {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 12px 0;
+        }
+
+        .eliminar {
+            background: #c62828;
+            padding: 6px 10px;
+        }
+
+        .total {
+            font-size: 25px;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+        #mensaje {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>CAJA</h1>
+
+        <div class="panel">
+            <h2>Productos</h2>
+            <div id="productos" class="productos"></div>
+        </div>
+
+        <div class="panel">
+            <h2>Lista de pedidos</h2>
+            <div id="listaPedidos">
+                <p>No hay pedidos</p>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2>Total</h2>
+            <p class="total" id="total">$0.00</p>
+            <p id="mensaje"></p>
+            <button onclick="finalizarVenta()">Cobrar</button>
+        </div>
+    </div>
+
+    <script src="caja.js"></script>
+</body>
+</html>
