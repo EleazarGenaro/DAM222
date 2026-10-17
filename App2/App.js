@@ -1,8 +1,6 @@
 // 1. Zona de importaciones 
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
-import { Saludo } from './components/Saludo';
-import { Saludo2 } from './components/Saludo2';
 import { Perfil } from './components/Perfil';
 
 // 2. Zona Main
@@ -11,14 +9,9 @@ export default function App() {
 
     <View style={styles.container}>
 
-      <Text>Hola mundo React Native</Text>
-      <Image source={require('./assets/wave.png')} />
-      <Text>--------------------------------------</Text>
-      <Saludo/>
-      <Text>--------------------------------------</Text>
-      <Saludo2/>
-      <Text>--------------------------------------</Text>
-      <Perfil/>
+      <Perfil nombre="Genaro" carrera="Sistemas Computacionales" materia="Programación para Dispositivos Móviles" cuatrimestre="4"/>
+      <Perfil nombre="Francisco" carrera="Sistemas Computacionales" materia="Programación para Dispositivos Móviles" cuatrimestre="4"/>
+      <Perfil nombre="José" carrera="Sistemas Computacionales" materia="Programación para Dispositivos Móviles" cuatrimestre="4"/>
 
       <StatusBar style="auto" />
 
