@@ -9,9 +9,9 @@ export default function App() {
 
     <View style={styles.container}>
 
-      <Perfil nombre="Genaro" carrera="Sistemas Computacionales" materia="Programación para Dispositivos Móviles" cuatrimestre="4"/>
-      <Perfil nombre="Francisco" carrera="Sistemas Computacionales" materia="Programación para Dispositivos Móviles" cuatrimestre="4"/>
-      <Perfil nombre="José" carrera="Sistemas Computacionales" materia="Programación para Dispositivos Móviles" cuatrimestre="4"/>
+      <Perfil style={styles.tajeta1} nombre="Genaro" carrera="Sistemas Computacionales" materia="Programación para Dispositivos Móviles" cuatrimestre="4"/>
+      <Perfil style={styles.tajeta2} nombre="Francisco" carrera="Sistemas Computacionales" materia="Programación para Dispositivos Móviles" cuatrimestre="4"/>
+      <Perfil style={styles.tajeta3} nombre="José" carrera="Sistemas Computacionales" materia="Programación para Dispositivos Móviles" cuatrimestre="4"/>
 
       <StatusBar style="auto" />
 
@@ -27,4 +27,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  tajeta1:{backgroundColor: 'red'},
+  tajeta2:{backgroundColor: 'green'},
+  tajeta3:{backgroundColor: 'yellow'},
+
 });
