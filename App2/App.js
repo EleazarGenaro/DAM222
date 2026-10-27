@@ -1,35 +1,29 @@
-// 1. Zona de importaciones 
+/*1. zona de importaciones */
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import { Perfil } from './components/Perfil';
+import { StyleSheet,Text, View} from 'react-native';
+import MenuScreen from './screens/MenuScreen';
 
-// 2. Zona Main
-export default function App() {
+
+/*2. zona de main*/ 
+export default function ImageBackgroung() {
   return (
 
     <View style={styles.container}>
 
-      <Perfil style={styles.tajeta1} nombre="Genaro" carrera="Sistemas Computacionales" materia="Programación para Dispositivos Móviles" cuatrimestre="4"/>
-      <Perfil style={styles.tajeta2} nombre="Francisco" carrera="Sistemas Computacionales" materia="Programación para Dispositivos Móviles" cuatrimestre="4"/>
-      <Perfil style={styles.tajeta3} nombre="José" carrera="Sistemas Computacionales" materia="Programación para Dispositivos Móviles" cuatrimestre="4"/>
+      <MenuScreen></MenuScreen>
 
+      
       <StatusBar style="auto" />
-
     </View>
   );
 }
 
-// 3. Zona de estilos y pocisionamiento
+/*3. zona de estilos y posicionamiento*/
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex:1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-
-  tajeta1:{backgroundColor: 'red'},
-  tajeta2:{backgroundColor: 'green'},
-  tajeta3:{backgroundColor: 'yellow'},
-
+  }
 });
